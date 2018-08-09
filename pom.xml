@@ -355,15 +355,16 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <server>tomcat-development-server</server>
-                    <port>9966</port>
-                    <path>/petclinic</path>
-                </configuration>
-            </plugin>
+              <groupId>org.apache.tomcat.maven</groupId>
+              <artifactId>tomcat7-maven-plugin</artifactId>
+              <version>2.2</version>
+              <configuration>
+                <server>tomcat-development-server</server>
+                <url>http://localhost:8080/manager/text</url>
+                <warfile>target/petclinic.war</warfile>
+                <path>/petclinic</path>
+              </configuration>
+            </plugin>			
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>cobertura-maven-plugin</artifactId>
